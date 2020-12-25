@@ -1,0 +1,20 @@
+{
+  "name": "aaaaaa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "bootstrap4": "0.0.1-security",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "mongodb": "^3.6.3",
+    "regex": "^0.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <h1 style="text-align: center">Add Product</h1>
+    <form action="/doinsert" method="post">
+    <center>
+    <div class="form-row" style="width: 50%">
+        <div class="form-group col-md-6">
+            {{!-- <label>Name</label> --}}
+            <input type="text" name= "txtName" id="" class="form-control" placeholder="Name">
+        </div>
+        <div class="form-group col-md-6">
+            {{!-- <label>Price</label> --}}
+            <input type="text" name= "txtPrice" id="" class="form-control" placeholder="Price">
+        </div>  
+    </div>
+    <div>
+        {{!-- <label>Age Range</label> --}}
+            <select style="width: 49.2%" class="custom-select" name="txtAge">
+                <option selected>Open this select menu</option>
+                <option value="2 to 4 Years">2 to 4 Years</option>
+                <option value="5 to 7 Years">5 to 7 Years</option>
+                <option value="Birth to 24 Months">Birth to 24 Months</option>
+            </select>
+         
+    </div>
+    <br>
+    <input class="btn btn-primary" type="submit" name= "creat" value="Submit">
+    <a class="btn btn-primary" href="/">Back to main menu</a>
+    
+    </form>
+    </center>
+    
+    
+</body>
+</html>

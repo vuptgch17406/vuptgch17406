@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script>
+        function confirmXoa(name){
+            let r = confirm('Do you want to delete ' + name + '?');
+            return r;
+        }
+    </script>
+    <title>Index</title>
+   
+</head>
+<body>
+    <center><h1>All product</h1></center>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Age Range</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Edit</th>
+        </tr>
+        </thead>
+        {{# each model}}
+            <tr>
+                <td>{{productName}}</td>
+                <td>{{price}}</td>
+                <td>{{AgeRange}}</td>
+                <td><a href="/delete?id={{_id}}" onclick="return confirmXoa('{{productName}}')">Delete</a></td>
+                <td><a href="/Edit?id={{_id}}">Edit</a></td>
+            </tr>
+        {{/each}}
+    </table>
+    <center>
+    <a class="btn btn-primary" href="/insert">New Product</a>  
+    <a class="btn btn-primary" href="/search">Search</a>
+    </center>
+    <br>
+    <center>{{> footer}}</center>
+</body>
+</html>
