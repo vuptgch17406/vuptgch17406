@@ -97,5 +97,6 @@ app.post('/doEdit', async(req,res)=>{
 
 })
 const PORT = process.env.PORT || 3000
-app.listen(PORT)
-console.log("server is running")
+var server = app.listen(PORT,function() {
+    console.log("server is running " + PORT)
+});
